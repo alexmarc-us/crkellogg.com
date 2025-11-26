@@ -6,6 +6,37 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    /* Page-local styles to make portfolio entries equal height and place titles above images */
+    .portfolio-grid > .col-4,
+    .portfolio-grid > .col-4 > .box {
+      height: 100%;
+    }
+
+    .portfolio-grid > .col-4 > .box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Constrain image area so all images align visually */
+    .portfolio-grid .image.featured {
+      max-height: 200px;
+      overflow: hidden;
+      margin-top: 0.75rem;
+    }
+
+    .portfolio-grid .image.featured img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Push footer/actions to the bottom of the card */
+    .portfolio-grid .box footer {
+      margin-top: auto;
+    }
+  </style>
 </head>
 
 <body class="no-sidebar is-preload">
@@ -39,15 +70,29 @@
             <header class="major">
               <h2>Portfolio</h2>
             </header>
-            <div class="row">
+            <div class="row portfolio-grid">
               <div class="col-4 col-6-medium col-12-small">
                 <section class="box">
-                  <a target="_blank"
-                    href="https://www.yumpu.com/en/document/view/68479826/sheepshead-review-spring-2023"
-                    class="image featured"><img src="images/sheepshead-review-spring-2023.jpg" alt="" /></a>
+                  <header>
+                    <h3>Creepy Podcast: Hollow Pines</h3>
+                  </header>
+                  <a target="_blank" href="https://www.patreon.com/posts/141795796?collection=872908" class="image featured"><img src="images/Creepy_v1b.png" alt="Creepy Podcast: Hollow Pines" /></a>
+                  <p>Featured audio: "Hollow Pines" — Creepy: A Horror Podcast</p>
+                  <footer>
+                    <ul class="actions">
+                      <li><a target="_blank" href="https://www.patreon.com/posts/141795796?collection=872908" class="button alt">Listen / Support on Patreon</a></li>
+                    </ul>
+                  </footer>
+                </section>
+              </div>
+              <div class="col-4 col-6-medium col-12-small">
+                <section class="box">
                   <header>
                     <h3>The Sheepshead Review</h3>
                   </header>
+                  <a target="_blank"
+                    href="https://www.yumpu.com/en/document/view/68479826/sheepshead-review-spring-2023"
+                    class="image featured"><img src="images/sheepshead-review-spring-2023.jpg" alt="" /></a>
                   <p>"Bye Bark" The Sheepshead Review, Spring 2023</p>
                   <footer>
                     <ul class="actions">
@@ -60,12 +105,12 @@
               </div>
               <div class="col-4 col-6-medium col-12-small">
                 <section class="box">
-                  <a target="_blank"
-                    href="https://www.amazon.com/Frontiers-Fright-Southwestern-Horror-Anthology/dp/B0DK41B4NZ"
-                    class="image featured"><img src="images/newyear.jpg" alt="" /></a>
                   <header>
                     <h3>New Year, New You: A Speculative Anthology of Reinvention</h3>
                   </header>
+                  <a target="_blank"
+                    href="https://www.amazon.com/Frontiers-Fright-Southwestern-Horror-Anthology/dp/B0DK41B4NZ"
+                    class="image featured"><img src="images/newyear.jpg" alt="" /></a>
                   <p>Featured short story: The Holy Daughters of Eng Mac</p>
                   <footer>
                     <ul class="actions">
@@ -78,12 +123,12 @@
               </div>
               <div class="col-4 col-6-medium col-12-small">
                 <section class="box">
-                  <a target="_blank"
-                    href="https://www.amazon.com/Frontiers-Fright-Southwestern-Horror-Anthology/dp/B0DK41B4NZ"
-                    class="image featured"><img src="images/frontier.jpg" alt="" /></a>
                   <header>
                     <h3>Frontiers of Fright: A Southwestern Horror Anthology</h3>
                   </header>
+                  <a target="_blank"
+                    href="https://www.amazon.com/Frontiers-Fright-Southwestern-Horror-Anthology/dp/B0DK41B4NZ"
+                    class="image featured"><img src="images/frontier.jpg" alt="" /></a>
                   <p>Featured short story: The Blackbrush</p>
                   <footer>
                     <ul class="actions">
